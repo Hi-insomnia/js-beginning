@@ -1,11 +1,11 @@
-{
-let a,b,mul;
-a = 5;
-b = 3;
-mul = a * b ;
-console.log(mul);
+// {
+// let a,b,mul;
+// a = 5;
+// b = 3;
+// mul = a * b ;
+// console.log(mul);
 
-}
+// }
 
 {
     // let photosInFolder, photosOnPage, numberOfPage;
@@ -17,7 +17,7 @@ console.log(mul);
     // alert("количество страниц = " + numberOfPage);
     
 }
-
+/*
 {
     let a = 1,b;
     b = a++;
@@ -39,4 +39,22 @@ console.log(mul);
     d3 = Math.floor(number/100) % 10;
     d4 = Math.floor(number/1000) % 10;
     console.log(d1,d2,d3,d4);
+}
+*/
+{
+    //   Дано расстояние в сантиметрах. Найти число полных метров в нем
+
+    let cm, m;
+    cm = parseInt(prompt("Введите  расстояие в сантиметрах", 0));
+    m = (cm - cm % 100)/100 ;
+    console.log (m);
+
+
+}
+
+{
+    // Дано трехзначное число. В нем зачеркнули первую слева цифру и приписали ее в конце. Найти полученное число.
+    let n;
+    
+
 }
