@@ -41,32 +41,100 @@
     console.log(d1,d2,d3,d4);
 }
 */
- {
-    /*найти максимум из двух чисел*/
-    let x, y, max;
-    x = parseFloat(prompt("Введите первое число")); 
-    y = parseFloat(prompt("Введите второе число")); 
+//  {
+//     /*найти максимум из двух чисел*/
+//     let x, y, max;
+//     x = parseFloat(prompt("Введите первое число")); 
+//     y = parseFloat(prompt("Введите второе число")); 
 
-    if(x > y) {
-        max = x;
-    }
-    else {
-        max = y;
+//     if(x > y) {
+//         max = x;
+//     }
+//     else {
+//         max = y;
+//     }
+//     alert("max = " + max);
+// }
+
+// {
+//     /*найти максимум из двух чисел - 2 способ*/
+//     let x, y, max;
+//     x = parseFloat(prompt("Введите первое число")); 
+//     y = parseFloat(prompt("Введите второе число")); 
+
+//     max = x;
+//     if(y > max) {
+//         max = y;
+//     }
+//     alert("max = " + max);
+// }
+
+// {
+//     /*найти максимум из трёх  чисел*/
+//     let x, y, z, max;
+//     x = parseFloat(prompt("Введите первое число")); 
+//     y = parseFloat(prompt("Введите второе число")); 
+//     z = parseFloat(prompt("Введите третье число")); 
+
+
+//     if(x >= y && x >= z){
+//         max = x;
+//     }
+//     else if(y >= x && y >= z) {
+//         max = y;
+//     }
+//     else {
+//         max = z;
+//     }
+//     alert("max = " + max);
+// }
+
+//  {   /*найти максимум из трёх чисел - 3 способ*/
+//     let x, y, z, max;
+//     x = parseFloat(prompt("Введите первое число")); 
+//     y = parseFloat(prompt("Введите второе число"));
+//     z = parseFloat(prompt("Введите третье число")); 
+
+//     max = x;
+//     if(y > max){
+//         max = y;
+//     }
+//     if(z > max){
+//         max = z;
+//     }
+//     alert("max = " + max);
+// }
+
+{    /*Даны n натуральных чисел. Найти максимум среди них. */
+    let n, a, max;
+    n = parseInt(prompt("Введите кол-во числел"));
+    max = parseInt(prompt("Введите число"));
+    for(let i = 1; i < n; i++){
+        a = parseInt(prompt("Введите число"));
+        if(a > max){
+            max = a;
+        }
     }
     alert("max = " + max);
 }
+
 {
-    /*найти максимум из двух чисел - 2 cgjcj,*/
-    let x, y, max;
-    x = parseFloat(prompt("Введите первое число")); 
-    y = parseFloat(prompt("Введите второе число")); 
-
-    max = x;
-    if(y > max) {
-        max = y;
+    /*Дана последовательность натуральных чисел, которая заканчивается вводом числа 0. Найти максимум среди этой последовательности. */
+    let a, max;
+    a = parseInt(prompt("Введите число"));
+    max = a;
+    while(a != 0){
+        a = parseInt(prompt("Введите число"));
+        if(a > max){
+            max = a;
+        }
     }
     alert("max = " + max);
 }
+
+
+
+
 
 
 
