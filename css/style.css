@@ -1,0 +1,26 @@
+body {
+    background: lavender;
+}
+
+.color {
+    color: rgb(83, 116, 40);
+}
+.border {
+    border: 2px solid rgb(105, 105, 179);
+    background-color: lightblue;
+}
+.large {
+    font-size: 24px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: rgb(3, 82, 75);
+    border-radius: 50%;
+    transition: transform 1s linear;
+}
+
+.move {
+    transform: translateX(600px);
+}
