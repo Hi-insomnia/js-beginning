@@ -21,8 +21,8 @@ h1.innerHTML = "Новый заголовок, <img src'img/tree-fill.svg' alt='
 
 //3 - работа со стилями (атрибут style)
 menu.style.background = "#92ec00";
-menu.style.border = "2px green solid"
-menu.style.fontSize = "30px"
+menu.style.border = "2px green solid";
+menu.style.fontSize = "30px";
 
 //4 - работа с классами (атрибут class)
 const block = document.getElementById("block");
