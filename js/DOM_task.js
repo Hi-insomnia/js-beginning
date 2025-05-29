@@ -41,7 +41,7 @@ link.setAttribute("href", "https://getbootstrap.com/");
 
 //4 задание
 
-const button = document.getElementById("button");
+const button = document.getElementById("button1");
 const circle = document.querySelector(".circle");
 
 btn.addEventListener("click", function(){

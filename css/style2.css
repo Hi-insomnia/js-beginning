@@ -22,5 +22,5 @@ body {
 }
 
 .move {
-    transform: translate(600px);
+    transform: translateY(600px);
 }
