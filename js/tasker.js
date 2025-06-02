@@ -6,13 +6,15 @@ let tasks = document.querySelectorAll(".task");
 
 
 
-//добавление новорй задачи
+//добавление новой задачи
 btnCreate.addEventListener("click", function(event){
     event.preventDefault(); //отменяем обновление по умолчанию - форма не обновляет страницу
     let text = newTask.value;
     const task = document.createElement("div");
     task.classList.add("task");
-    task.innerHTML = `<span>${text}</span>`;
+    task.innerHTML = `<span>${text}</span>
+                    <i class="bi bi-pencil-fill btn-edit" tabindex="0"></i>
+                    <i class="bi bi-trash-fill btn-remove" tabindex="0"></i>`;
     container.append(task); 
     tasks = document.querySelectorAll(".task");
     console.log(tasks);
@@ -68,8 +70,91 @@ btnSort2.addEventListener("click", function (){
     }
 });
 
+//только срочные задачи
 const btnEmergency = document.getElementById("btn-emergency");
 btnEmergency.addEventListener("click", function(){
     let newTask = [...tasks];
     
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*let btnsRemove = document.querySelectorAll(".btn-remove");
+
+for (let btn of btnsRemove){
+btn.addEventListener("click", () =>{
+    console.log("remove")
+})
+}
+*/
+//удаление и редактирование задачи
+container.addEventListener("click", (event)=>{
+    let btn = event.target;
+    //удаление
+    if(btn.classList.contains("btn-remove")) {
+        btn.closest(".task").outerHTML = "";
+    }
+    //редактирование
+    if(btn.classList.contains("btn-edit")) {
+        btn.closest(".task").querySelector("span").setAttribute("contenteditable", "true");
+
+        btn.closest(".task").outerHTML = querySelector("span").focus()
+
+    }
+
+})
+
+
+
+
+
+//пример всплытия
+/*let i = 0;
+const tags = document.querySelectorAll("*");
+for(let tag of tags) {
+    tag.addEventListener("click", (event)=>{
+        i++;
+        console.log("этап " + i);
+        console.log("целевой элемент:");
+        console.log(event.target);
+        console.log("элемент на котором сработало событие:");
+        console.log(event.currentTarget);
+    });
+
+}*/
+ 
+
+
+
+
+/*function myMax(){
+
+    let max = arguments[0] || 0;
+    for (let i = 1; i < arguments.length; i++)
+    if(arguments[i] > max) {
+        max = arguments[1];
+    }
+    return max;
+}
+console.log(myMax());*/
+
+
+
+
+
+
