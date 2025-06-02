@@ -56,7 +56,7 @@ block.append(image);//добавляем картинку в блок
 console.log(document.querySelectorAll("a"));
 console.log(menu.querySelectorAll("a"));
 
-//8 - работа с прпедками
+//8 - работа с предками
 const lastlink = document.querySelector(".menu li:last-child a");
 console.log(lastlink);
 const parent = lastlink.closest("li"); //взять ближайшего предка с заданным селектором

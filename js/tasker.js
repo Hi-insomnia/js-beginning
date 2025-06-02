@@ -46,6 +46,7 @@ function compare(a, b) {
 
 btnSort1.addEventListener("click", function (){
     let newTask = [...tasks].sort(compare)
+    container.innerHTML = "";
     for (let i in newTask) {
         container.append(newTask[i])
     }
@@ -54,6 +55,7 @@ btnSort1.addEventListener("click", function (){
 
 //обратная сортировка
 const btnSort2 = document.getElementById("btn-sort2");
+
 function compareReverse(a, b) {
     if (a.querySelector("span").innerHTML > b.querySelector("span").innerHTML) return -1;
 
@@ -65,21 +67,61 @@ function compareReverse(a, b) {
 
 btnSort2.addEventListener("click", function (){
     let newTask = [...tasks].sort(compareReverse)
+    container.innerHTML = "";
     for (let i in newTask) {
         container.append(newTask[i])
     }
 });
 
 //только срочные задачи
+
 const btnEmergency = document.getElementById("btn-emergency");
-btnEmergency.addEventListener("click", function(){
+
+btnEmergency.addEventListener("click", function() {
     let newTask = [...tasks];
-    
+   newTask = newTask.filter(item => item.classList.contains("immediate"));
+   container.innerHTML = "";
+   for (let i in newTask) {
+    container.append(newTask[i])
+}
+
 })
 
 
+//поиск
+let btnSearch = document.getElementById("search");
+let btnFilter = document.getElementById("btn-filter");
+btnFilter.addEventListener("click", function(event){
+    event.preventDefault();
+    let value = btnSearch.value;
+    let newTask = [...tasks];
+
+    newTask = newTask.filter(function(item){
+        return item.innerHTML.indexOf(value) != -1;
+    });
+    container.innerHTML = "";
+    for (let i in newTask) {
+    container.append(newTask[i]);
+    console.log(newTask)
+    }
+
+})
+
+//сброс
+
+let btnReset= document.getElementById("btn-reset");
 
 
+btnReset.addEventListener("click", function() {
+    let newTask = [...tasks];
+
+
+    container.innerHTML = "";
+    for (let i in newTask) {
+    container.append(newTask[i]);
+    }
+
+})
 
 
 
@@ -113,7 +155,7 @@ container.addEventListener("click", (event)=>{
     if(btn.classList.contains("btn-edit")) {
         btn.closest(".task").querySelector("span").setAttribute("contenteditable", "true");
 
-        btn.closest(".task").outerHTML = querySelector("span").focus()
+        btn.closest(".task").querySelector("span").focus({focusVisible:true});// btn.closest(".task").outerHTML = querySelector("span").focus()
 
     }
 
